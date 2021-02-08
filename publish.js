@@ -605,10 +605,10 @@ function buildGroupNav (members, title) {
 
     if (!globalNav) {
       // turn the heading into a link so you can actually get to the global page
-      nav += '<h3>' + linkto('global', 'Global') + '</h3>'
+      nav += '<h3>' + linkto('global', globalStr) + '</h3>'
     }
     else {
-      nav += '<h3>Global</h3><ul>' + globalNav + '</ul>'
+      nav += '<h3>' + globalStr + '</h3><ul>' + globalNav + '</ul>'
     }
   }
   nav += '</div>'
@@ -666,6 +666,7 @@ function buildNav(members, navTypes = null, betterDocs) {
   return nav
 }
 
+const globalStr = "Type Definitions";
 /**
  *
  * Build the navigation for a given set of members which belong to the category defined in the title
@@ -702,7 +703,7 @@ function buildGroupNavNested (members, title) {
     events: {name: 'Events', seen: seen, link: linkto},
     mixins: {name: 'Mixins', seen: seen, link: linkto},
     components: {name: 'Components', seen: seen, link: linkto},
-    globals: {name: 'Type Definitions', seen: seen, link: linkto},
+    globals: {name: globalStr, seen: seen, link: linkto},
   };
   //organize the members according to their category and then type
   let categorized = {};
@@ -1127,7 +1128,7 @@ exports.publish = function(taffyData, opts, tutorials) {
     generateSourceFiles(sourceFiles, opts.encoding)
   }
 
-  if (members.globals.length) { generate('Global', 'Title', [{kind: 'globalobj'}], globalUrl) }
+  if (members.globals.length) { generate(globalStr, 'Title', [{kind: 'globalobj'}], globalUrl) }
 
   // index page displays information from package.json and lists files
   files = find({kind: 'file'})
