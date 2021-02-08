@@ -18,7 +18,7 @@ var search = env.conf.templates && env.conf.templates.search
 <html lang="en">
 <?js= this.partial('head.tmpl', { betterDocs, title }) ?>
 
-<body class="<?js= self.smallHeader ? 'layout small-header' : 'layout'?>">
+<body class="<?js= self.smallHeader ? 'layout small-header' : 'layout'?> bb-resources">
     <div id="stickyNavbarOverlay"></div>
     <?js= this.partial('topnav.tmpl', { betterDocs }) ?>
     <div id="main" class="<?js= ((betterDocs.useNavFolding ? ' use-nav-folding' : '')+(betterDocs.foldingDefaultClosed && betterDocs.useNavFolding ? ' folding-default-closed' : (betterDocs.useNavFolding ? ' folding-default-opened' : ''))).trim() ?>">

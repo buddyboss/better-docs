@@ -4,11 +4,72 @@ var self = this;
 ?>
 
 <?js if (data.kind === 'package') { ?>
-    <h3><?js= data.name ?> <?js= data.version ?></h3>
+    <h3>Version: BuddyBoss App <?js= data.version ?></h3>
 <?js } ?>
 
 <?js if (data.readme) { ?>
-    <section>
-        <article><?js= data.readme ?></article>
-    </section>
+<section>
+    <article class="home_page">
+        <p>
+        This is codex. It consists of:
+        </p>
+        <ul class="bbdocs-docs-list">
+            <li class="bbdocs-docs-single">
+                
+                <h3>
+                    <span class="dark_icon">
+                    <img src="https://www.buddyboss.com/resources/wp-content/uploads/2019/06/res1.svg">
+                    </span>
+                    <span class="section_title">Hooks API </span>
+                </h3>
+                <div class="inside" style="background-image:url(https://www.buddyboss.com/resources/wp-content/uploads/2019/06/res1_2.svg);">
+                    <span class="section_content">
+                    Hooks API is used for changing core app code from custom code, by calling methods of already instantiated classes. All classes and their methods are documented on “Classes” part.
+                    </span>
+                </div>
+                
+            </li>
+            <li class="bbdocs-docs-single">
+                
+                <h3>
+                    <span class="dark_icon">
+                    <img src="https://www.buddyboss.com/resources/wp-content/uploads/2019/06/res1.svg">
+                    </span>
+                    <span class="section_title">Components </span>
+                </h3>
+                <div class="inside" style="background-image:url(https://www.buddyboss.com/resources/wp-content/uploads/2019/06/res1_2.svg);">
+                    <span class="section_content">
+                    Under Components you can find some of core app components we made that you can import in your custom code and use.
+                    </span>
+                </div>
+                
+            </li>
+            <li class="bbdocs-docs-single">
+                
+                <h3>
+                    <span class="dark_icon">
+                    <img src="https://www.buddyboss.com/resources/wp-content/uploads/2019/06/res1.svg">
+                    </span>
+                    <span class="section_title">Type Definitions </span>
+                </h3>
+                <div class="inside" style="background-image:url(https://www.buddyboss.com/resources/wp-content/uploads/2019/06/res1_2.svg);">
+                    <span class="section_content">
+                    Type Definitions will give you better insight in type of data Hooks use. What data you need to pass and what you need to return from hook.
+                    </span>
+                </div>
+                
+            </li>
+        </ul>
+        <p>
+        Learn how to use these elements to update the BuddyBoss App in our developer tutorials.
+        </p>
+        <a href="https://www.buddyboss.com/resources/dev-docs/app-tutorials"
+            class="view_button"
+            target="_blank"
+        >
+            View Tutorials
+        </a>
+    </article>
+</section>
 <?js } ?>
+

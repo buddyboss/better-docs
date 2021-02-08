@@ -632,7 +632,7 @@ function buildGroupNav (members, title) {
  */
 function buildNav(members, navTypes = null, betterDocs) {
   const href = betterDocs.landing ? 'docs.html' : 'index.html'
-  var nav = navTypes ? '' : `<h2><a href="${href}">Documentation</a></h2>`
+  var nav = navTypes ? '' : `<h2><a href="${href}">App Codex</a></h2>`
   if (env.conf.templates.betterDocs.includeTodoPage) {
     let todoHref = 'Todo.html';
     nav += `<h2><a href="${todoHref}">TODO</a></h2>`;
@@ -697,12 +697,12 @@ function buildGroupNavNested (members, title) {
     modules: {name: 'Modules', seen: {}, link: linkto},
     externals: {name: 'Externals', seen: seen, link: linktoExternal},
     namespaces: {name: 'Namespaces', seen: seen, link: linkto},
-    classes: {name: 'Classes', seen: seen, link: linkto},
+    classes: {name: 'Hooks', seen: seen, link: linkto},
     interfaces: {name: 'Interfaces', seen: seen, link: linkto},
     events: {name: 'Events', seen: seen, link: linkto},
     mixins: {name: 'Mixins', seen: seen, link: linkto},
     components: {name: 'Components', seen: seen, link: linkto},
-    globals: {name: 'Global', seen: seen, link: linkto},
+    globals: {name: 'Type Definitions', seen: seen, link: linkto},
   };
   //organize the members according to their category and then type
   let categorized = {};
@@ -1133,7 +1133,7 @@ exports.publish = function(taffyData, opts, tutorials) {
   files = find({kind: 'file'})
   packages = find({kind: 'package'})
 
-  generate('Home', '',
+  generate('App Codex', '',
     packages.concat(
       [{
         kind: 'mainpage',
@@ -1242,7 +1242,7 @@ exports.publish = function(taffyData, opts, tutorials) {
     const content = fs.readFileSync(conf.betterDocs.landing, 'utf8')
         
     var landingPageData = {
-      title: 'Home',
+      title: 'App Codex',
       content,
     }
 
