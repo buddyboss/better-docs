@@ -1,0 +1,243 @@
+.logo img {
+    max-height: 45px;
+    width: auto;
+}
+
+.top-nav {
+    padding-top: 12px;
+}
+
+.top-nav .inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.top-nav .menu .navigation .link {
+    font-size: 15px;
+}
+
+#main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+#main #main-content-wrapper {
+    background-color: #fff;
+}
+
+#main > .core > .content {
+    box-shadow: none;
+    padding: 0;
+}
+
+#main-content-wrapper .content h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 14px;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+#main-content-wrapper .content h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 26px;
+}
+
+#sidebarNav ul,
+#side-nav ul {
+    padding: 0;
+}
+
+#sidebarNav h3,
+#side-nav h3 {
+    font-weight: 600;
+    font-size: 17px;
+    color: #4D5C6D;
+    margin: 20px 0 10px;
+    text-transform: none;
+}
+
+#sidebarNav h3 a,
+#side-nav h3 a {
+    color: #4D5C6D;
+}
+
+#sidebarNav a:hover, 
+#sidebarNav a.active {
+    color: #df613c;
+}
+
+#side-nav a:hover, 
+#side-nav a.is-active {
+    color: #df613c;
+}
+
+.member > .description p {
+    font-size: 16px;
+}
+
+.tag-source > div {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.tag-source .source-button {
+    margin: 0 0 10px;
+}
+
+.member:not(:last-child):after {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.member > .name .code-name {
+    font-size: 20px;
+}
+
+.prettyprint {
+    background-color: #292b36;
+}
+
+.button {
+    color: #df613c;
+    border-color: #df613c;
+}
+
+.details dt {
+    border-left: 3px solid #df613c;
+    padding-left: 10px;
+    font-size: inherit;
+}
+
+.content header p {
+    font-size: 17px;
+}
+
+.content table thead td, 
+.content table thead th {
+    border-bottom-width: 1px;
+}
+
+table.params tr, 
+table.props tr,
+.content table td, 
+.content table th {
+    border-color: #e0e0e0;
+}
+
+table.params td, 
+table.props td,
+table.params thead th, 
+table.props thead th {
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+table.params td.name code, 
+table.props td.name code {
+    font-size: 14px;
+}
+
+.content a {
+    color: #df613c;
+}
+
+.content a:hover {
+    color: #4d5c6d;
+}
+
+.method-parameter {
+    font-size: inherit;
+}
+
+@media screen and (max-width: 768px) {
+    #main > .core {
+        padding: 28px;
+    }
+}
+
+.home_page p {
+    color: #4d5c6d; 
+    font-size: 15px;
+    line-height: 1.4; 
+    margin-bottom: 20px;
+}
+
+ul.bbdocs-docs-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+li.bbdocs-docs-single {
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 0;
+    margin-bottom: 20px;
+    position: relative;
+    border: 1px solid #e7e9ec;
+    border-radius: 4px;
+    background: #fff;
+    -webkit-transition: all linear .2s;
+    transition: all linear .2s;
+}
+
+li.bbdocs-docs-single a {
+    color: #df613c;
+}
+
+li.bbdocs-docs-single h3 {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 35px 30px 0;
+    margin: 0;
+    line-height: 1.4;
+    display: flex;
+    align-content: center;
+    min-height: 68px;
+    position: relative;
+    color: #df613c;
+}
+
+.dark_icon {
+    line-height: 0;
+    margin-right: 10px;
+}
+
+li.bbdocs-docs-single .inside {
+    padding: 30px;
+    min-height: 180px;
+    color: #4d5c6d;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+a.view_button {
+    background-color: #df613c;
+    line-height: 20px;
+    color: #fff;
+    box-shadow: 0 -2px 0 0 #b03510 inset;
+    letter-spacing: -.24px;
+    font-weight: 400;
+    transition: .5s;
+    font-family: sofia pro soft,helvetica neue,Helvetica,Arial,sans-serif;
+    border-radius: 3px;
+
+    padding: 11px 34px 10px;
+    letter-spacing: -.24px;
+    font-weight: 200;
+    font-size: 16px;
+    display: block;
+    width: 160px;
+}
+
+a.view_button:hover {
+    background-color: #b03510;
+    color: #fff;
+}
