@@ -115,7 +115,7 @@ h1,h2,h3,h4,
 .content h1, 
 .content h3, .content h4, .content h5, .content h6,
 .content header.page-title h1 {
-    font-family: 'SF UI Display Regular', sans-serif;
+    font-family: 'SF UI Display Bold', sans-serif;
 }
 
 body.bb-resources {
@@ -174,23 +174,65 @@ body.bb-resources {
     line-height: 26px;
 }
 
+#main>.sidebar {
+    padding-right: 0;
+}
+
 #sidebarNav ul,
 #side-nav ul {
     padding: 0;
 }
 
+#sidebarNav ul li a {
+    display: block;
+    margin: 0;
+    line-height: 1.2;
+    padding: 10px 15px;
+    color: #808080;
+    font-weight: 400;
+    font-size: 12px;
+    transition: all ease 0.2s;
+}
+
+#sidebarNav ul li a:hover {
+    color: #333;
+    background-color: #EFF0F1;
+}
+
+#sidebarNav ul li {
+    padding: 0;
+}
+
 #sidebarNav h3,
 #side-nav h3 {
-    font-weight: 600;
+    text-transform: none;
+    font-weight: 500;
     font-size: 17px;
     color: #4D5C6D;
-    margin: 20px 0 10px;
-    text-transform: none;
+    margin: 0;
+    padding: 10px 15px;
 }
 
 #sidebarNav h3 a,
 #side-nav h3 a {
     color: #4D5C6D;
+}
+
+#sidebarNav h2 a {
+    display: block;
+    margin: 0;
+    line-height: 1.2;
+    padding: 10px 15px;
+    color: #808080;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: 'SF UI Text', sans-serif;
+    transition: all ease 0.2s;
+}
+
+#sidebarNav h2 a:hover {
+    color: #333;
+    background-color: #EFF0F1;
 }
 
 #sidebarNav a:hover, 
