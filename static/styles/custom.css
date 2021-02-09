@@ -183,7 +183,8 @@ body.bb-resources {
     padding: 0;
 }
 
-#sidebarNav ul li a {
+#sidebarNav ul li a,
+#side-nav ul li a {
     display: block;
     margin: 0;
     line-height: 1.2;
@@ -194,12 +195,14 @@ body.bb-resources {
     transition: all ease 0.2s;
 }
 
-#sidebarNav ul li a:hover {
+#sidebarNav ul li a:hover,
+#side-nav ul li a:hover {
     color: #333;
     background-color: #EFF0F1;
 }
 
-#sidebarNav ul li {
+#sidebarNav ul li,
+#side-nav ul li {
     padding: 0;
 }
 
@@ -218,7 +221,8 @@ body.bb-resources {
     color: #4D5C6D;
 }
 
-#sidebarNav h2 a {
+#sidebarNav h2 a,
+#side-nav > a {
     display: block;
     margin: 0;
     line-height: 1.2;
@@ -230,7 +234,8 @@ body.bb-resources {
     transition: all ease 0.2s;
 }
 
-#sidebarNav h2 a:hover {
+#sidebarNav h2 a:hover,
+#side-nav > a:hover {
     color: #333;
     background-color: #EFF0F1;
 }
@@ -265,6 +270,7 @@ body.bb-resources {
 
 .member > .name .code-name {
     font-size: 20px;
+    font-family: inherit;
 }
 
 .prettyprint {
