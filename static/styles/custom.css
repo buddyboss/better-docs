@@ -233,8 +233,8 @@ a.view_button {
     letter-spacing: -.24px;
     font-weight: 200;
     font-size: 16px;
-    display: block;
-    width: 160px;
+    display: inline-block;
+    min-width: 160px;
 }
 
 a.view_button:hover {
