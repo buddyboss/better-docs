@@ -35,17 +35,87 @@
     font-style:normal
 } */
 
+@font-face {
+font-family: 'SF UI Text Regular';
+font-style: normal;
+font-weight: normal;
+src:url(../fonts/SFUIText-Regular.woff) format("woff"),url(../fonts/SFUIText-Regular.ttf) format("truetype");
+}
+
+
+@font-face {
+font-family: 'SF UI Text Italic';
+font-style: normal;
+font-weight: normal;
+src:url(../fonts/SFUIText-RegularItalic.woff) format("woff"),url(../fonts/SFUIText-RegularItalic.ttf) format("truetype");
+}
+
+
+@font-face {
+font-family: 'SF UI Text Light';
+font-style: normal;
+font-weight: normal;
+src:url(../fonts/SFUIText-Light.woff) format("woff"),url(../fonts/SFUIText-Light.ttf) format("truetype");
+}
+
+
+@font-face {
+font-family: 'SF UI Text Light Italic';
+font-style: normal;
+font-weight: normal;
+src:url(../fonts/SFUIText-LightItalic.woff) format("woff"),url(../fonts/SFUIText-LightItalic.ttf) format("truetype");
+}
+
+
+@font-face {
+font-family: 'SF UI Text Medium';
+font-style: normal;
+font-weight: normal;
+src:url(../fonts/SFUIText-Medium.woff) format("woff"),url(../fonts/SFUIText-Medium.ttf) format("truetype");
+}
+
+
+@font-face {
+font-family: 'SF UI Text Semibold';
+font-style: normal;
+font-weight: normal;
+src:url(../fonts/SFUIText-Semibold.woff) format("woff"),url(../fonts/SFUIText-Semibold.ttf) format("truetype");
+}
+
+@font-face {
+font-family: 'SF UI Display Regular';
+font-style: normal;
+font-weight: normal;
+src:url(../fonts/SFUIDisplay-Regular.woff) format("woff"),url(../fonts/SFUIDisplay-Regular.ttf) format("truetype");
+}
+
+
+@font-face {
+font-family: 'SF UI Display Medium';
+font-style: normal;
+font-weight: normal;
+src:url(../fonts/SFUIDisplay-Medium.woff) format("woff"),url(../fonts/SFUIDisplay-Medium.ttf) format("truetype");
+}
+
+
+@font-face {
+font-family: 'SF UI Display Bold';
+font-style: normal;
+font-weight: normal;
+src:url(../fonts/SFUIDisplay-Bold.woff) format("woff"),url(../fonts/SFUIDisplay-Bold.ttf) format("truetype");
+}
+
 body,
 p {
     font-family: sofia pro soft;
-    font-family: 'SF UI Text', sans-serif;
+    font-family: 'SF UI Text Regular', sans-serif;
 }
 
 h1,h2,h3,h4,
 .content h1, 
 .content h3, .content h4, .content h5, .content h6,
 .content header.page-title h1 {
-    font-family: 'SF UI Display', sans-serif;
+    font-family: 'SF UI Display Regular', sans-serif;
 }
 
 body.bb-resources {
