@@ -1,3 +1,49 @@
+@font-face{
+    font-family:sofia pro soft;
+    src:url(../fonts/SofiaProSoftRegular.woff) format("woff"),url(../fonts/SofiaProSoftRegular.ttf) format("truetype");
+    font-weight:400;
+    font-style:normal
+}
+/* @font-face{
+    font-family:sofia pro soft;
+    src:url(../fonts/SofiaProSoftRegular-Italic.woff) format("woff"),url(../fonts/SofiaProSoftRegular-Italic.ttf) format("truetype");
+    font-weight:400;
+    font-style:italic
+} */
+@font-face{
+    font-family:sofia pro soft;
+    src:url(../fonts/SofiaProSoftMedium.woff) format("woff"),url(../fonts/SofiaProSoftMedium.ttf) format("truetype");
+    font-weight:500;
+    font-style:normal
+}
+/* @font-face{
+    font-family:sofia pro soft;
+    src:url(../fonts/SofiaProSoftLight-Italic.woff) format("woff"),url(../fonts/SofiaProSoftLight-Italic.ttf) format("truetype");
+    font-weight:300;
+    font-style:italic
+} */
+@font-face{
+    font-family:sofia pro soft;
+    src:url(../fonts/SofiaProSoftLight.woff) format("woff"),url(../fonts/SofiaProSoftLight.ttf) format("truetype");
+    font-weight:300;
+    font-style:normal
+}
+/* @font-face{
+    font-family:sofia pro soft;
+    src:url(../fonts/SofiaProSoftBold.woff) format("woff"),url(../fonts/SofiaProSoftBold.ttf) format("truetype");
+    font-weight:700;
+    font-style:normal
+} */
+
+body,
+p,
+h1,h2,h3,h4,
+.content h1, 
+.content h3, .content h4, .content h5, .content h6,
+.content header.page-title h1 {
+    font-family: sofia pro soft;
+}
+
 .logo img {
     max-height: 45px;
     width: auto;
