@@ -275,6 +275,17 @@ body.bb-resources {
 
 .prettyprint {
     background-color: #292b36;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.prettyprint code {
+    font-family: Monaco, "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+
+.prettyprint code,
+.prettyprint code .pln {
+    color: #fff;
 }
 
 .button {
