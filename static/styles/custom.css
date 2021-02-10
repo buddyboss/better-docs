@@ -139,8 +139,16 @@ body.bb-resources {
     margin: 0 auto;
 }
 
-.top-nav .menu .navigation .link {
-    font-size: 15px;
+.top-nav .navigation a.link {
+    font-family: "Sofia Pro Soft";
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.top-nav .menu .navigation .link:hover,
+.top-nav .menu .navigation .link:hover:not(.no-hover) {
+    border-bottom: 0;
+    color: #df613c;
 }
 
 #main {
