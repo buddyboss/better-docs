@@ -633,7 +633,7 @@ function buildGroupNav (members, title) {
  */
 function buildNav(members, navTypes = null, betterDocs) {
   const href = betterDocs.landing ? 'docs.html' : 'index.html'
-  var nav = navTypes ? '' : `<h2><a href="${href}">App Codex</a></h2>`
+  var nav = '';
   if (env.conf.templates.betterDocs.includeTodoPage) {
     let todoHref = 'Todo.html';
     nav += `<h2><a href="${todoHref}">TODO</a></h2>`;
