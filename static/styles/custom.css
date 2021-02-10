@@ -233,6 +233,14 @@ body.bb-resources {
     transition: all ease 0.2s;
 }
 
+#sidebarNav ul li a.active {
+    background-color: #EFF0F1;
+    border-right: 3px solid #df613c;
+    padding-right: 21px;
+    color: #000;
+    font-weight: 600;
+}
+
 #sidebarNav ul li a:hover,
 #side-nav ul li a:hover {
     color: #333;
