@@ -105,6 +105,31 @@ font-weight: normal;
 src:url(../fonts/SFUIDisplay-Bold.woff) format("woff"),url(../fonts/SFUIDisplay-Bold.ttf) format("truetype");
 }
 
+html {
+    height: auto;
+}
+
+#sidebarNav,
+#main > #sidebarNav {
+    position: fixed;
+    height: calc(100vh - 75px);
+    width: 330px;
+    overflow-x: hidden;
+}
+
+#main-content-wrapper {
+    margin-left: 330px;
+}
+
+#main > #main-content-wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.sidebar .search-wrapper {
+    margin-top: -5px;
+}
+
 body,
 p {
     font-family: sofia pro soft;
