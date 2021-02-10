@@ -433,3 +433,17 @@ a.view_button:hover {
     background-color: #b03510;
     color: #fff;
 }
+
+.sidebar #search {
+    border: 1px solid #DEDFE2;
+    color: #4D5C6D;
+    padding-left: 35px;
+    font-size: 14px;
+    height: 34px;
+    border-radius: 20px;
+    width: 90%;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-image: url(../img/search.svg);
+    background-position: left 10px center;
+}
