@@ -186,6 +186,10 @@ body.bb-resources {
     padding-right: 0;
 }
 
+#side-nav {
+    display: none;
+}
+
 #sidebarNav ul,
 #side-nav ul {
     padding: 0;
