@@ -11,30 +11,6 @@ $().ready(() => {
   if (!$('.vertical-section').length) {
     wrapper.hide()
   }
-  
-  if(subsectionsInSideNav){
-    //Add subsections to the side navigation
-    $('.subsection').each((i, el) => {
-      const subsection = $(el)
-      const type=subsection.attr('data-type');
-      if(subsectionsInSideNav.indexOf(type) >= 0){
-        const subsectionName = subsection.find('> .subsection-title').text();
-        if(subsectionName){
-          wrapper.append($('<h4/>').text(subsectionName))
-          const list = $('<ul></ul>')
-          subsection.find('dl dt a').each((i, el) => {
-            const navLink = $(el)
-            const name = navLink.clone().children().remove().end().text();
-            const href = navLink.attr('href')
-            const link = $(`<a href="${href}" />`).text(name)
-            list.append($('<li></li>').append(link))
-            //links.push({ link, offset: navLink.offset().top})
-          })
-          wrapper.append(list)
-        }
-      }
-    });
-  }
 
   $('.vertical-section').each((i, el) => {
     const section = $(el)
@@ -49,7 +25,7 @@ $().ready(() => {
         const href = navLink.find('a').attr('href')
         const link = $(`<a href="${href}" />`).text(name)
         list.append($('<li></li>').append(link))
-        links.push({ link, offset: navLink.offset().top, navLink:navLink})
+        links.push({ link, offset: navLink.offset().top})
       })
       wrapper.append(list)
     }
@@ -61,12 +37,10 @@ $().ready(() => {
         const href = navLink.find('a').attr('href')
         const link = $(`<a href="${href}" />`).text(name)
         wrapper.append(link)
-        links.push({ link, offset: navLink.offset().top, navLink:navLink})
+        links.push({ link, offset: navLink.offset().top})
       })
     }
   })
-  
-  
 
   if (!$.trim(wrapper.text())) {
     return wrapper.hide()
@@ -80,7 +54,7 @@ $().ready(() => {
     for (let index = (links.length-1); index >= 0; index--) {
       const link = links[index]
       link.link.removeClass('is-active')
-      if ((position + OFFSET) >= (core.scrollTop() + link.navLink.offset().top)) {
+      if ((position + OFFSET) >= link.offset) {
         if (!activeSet) {
           link.link.addClass('is-active')
           activeSet = true
@@ -98,7 +72,7 @@ $().ready(() => {
 
   links.forEach(link => {
     link.link.click(() => {
-      core.animate({ scrollTop: (core.scrollTop() + link.navLink.offset().top) - OFFSET + 1 }, 500)
+      core.animate({ scrollTop: link.offset - OFFSET + 1 }, 500)
     })
   })
 })
