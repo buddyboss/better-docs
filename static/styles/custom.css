@@ -185,6 +185,7 @@ body.bb-resources {
 
 #main #main-content-wrapper {
     background-color: #fff;
+    border-right: 1px solid #E7E9EC;
 }
 
 #main > .core > .content {
