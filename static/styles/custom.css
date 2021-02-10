@@ -301,6 +301,11 @@ body.bb-resources {
     margin: 0 0 10px;
 }
 
+.tag-source .source-button a.button {
+    font-size: 14px;
+    padding: 5px 15px;
+}
+
 .member:not(:last-child):after {
     margin-left: 0;
     margin-right: 0;
