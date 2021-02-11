@@ -141,6 +141,7 @@ h1,h2,h3,h4,
 .content h3, .content h4, .content h5, .content h6,
 .content header.page-title h1 {
     font-family: 'SF UI Display Bold', sans-serif;
+    font-family: 'sofia pro soft';
 }
 
 body.bb-resources {
@@ -390,6 +391,7 @@ table.props td.name code {
 
 .method-parameter {
     font-size: inherit;
+    margin-bottom: 5px;
 }
 
 @media screen and (max-width: 768px) {
