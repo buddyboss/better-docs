@@ -455,7 +455,7 @@ li.bbdocs-docs-single h3 {
 
 li.bbdocs-docs-single .inside {
     padding: 30px;
-    min-height: 180px;
+    min-height: 130px;
     color: #4d5c6d;
     background-repeat: no-repeat;
     background-position: calc(100%) calc(100% + 50px);
