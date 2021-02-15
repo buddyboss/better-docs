@@ -105,6 +105,15 @@ font-weight: normal;
 src:url(../fonts/SFUIDisplay-Bold.woff) format("woff"),url(../fonts/SFUIDisplay-Bold.ttf) format("truetype");
 }
 
+html {
+    min-height: 100%;
+}
+
+body {
+    height: 100%;
+    min-height: 100%;
+}
+
 #sidebarNav,
 #main > #sidebarNav {
     position: fixed;
