@@ -428,10 +428,10 @@ li.bbdocs-docs-single {
     font-size: 15px;
     line-height: 1.4;
     margin: 0;
+    padding: 30px;
     margin-bottom: 20px;
     position: relative;
-    border: 1px solid #e7e9ec;
-    border-radius: 4px;
+    border: 0;
     background: #fff;
     -webkit-transition: all linear .2s;
     transition: all linear .2s;
