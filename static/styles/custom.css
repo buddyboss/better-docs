@@ -443,9 +443,13 @@ li.bbdocs-docs-single a {
     color: #df613c;
 }
 
-li.bbdocs-docs-single img {
+li.bbdocs-docs-single .section-img {
     width: 100px;
-    max-height: 70px;
+    flex: 0 0 100px;
+}
+
+li.bbdocs-docs-single img {
+    width: 100%;
     margin-right: 10px;
     vertical-align: middle;
 }
@@ -455,7 +459,20 @@ li.bbdocs-docs-single h3 {
     font-weight: 500;
     padding: 0 0 20px;
     margin: 0;
-    color: #df613c;
+}
+
+li.bbdocs-docs-single .section_content {
+    display: block;
+}
+
+li.bbdocs-docs-single .section_more {
+    margin: 20px 0 0;
+    text-decoration: none;
+    display: inline-block;
+}
+
+li.bbdocs-docs-single span.section_more {
+    font-style: italic;
 }
 
 .dark_icon {
@@ -467,8 +484,6 @@ li.bbdocs-docs-single .inside {
     padding-left: 30px;
     min-height: 130px;
     color: #4d5c6d;
-    background-repeat: no-repeat;
-    background-position: calc(100%) calc(100% + 50px);
 }
 
 a.view_button {
