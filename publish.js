@@ -638,6 +638,9 @@ function buildNav(members, navTypes = null, betterDocs) {
     let todoHref = 'Todo.html';
     nav += `<h2><a href="${todoHref}">TODO</a></h2>`;
   }
+
+  nav += `<h3><a href="styles.html">Global App Styles</a></h3>`;
+
   var categorised = {}
   var rootScope = {}
 
@@ -931,6 +934,9 @@ exports.publish = function(taffyData, opts, tutorials) {
   globalUrl = helper.getUniqueFilename('global')
   helper.registerLink('global', globalUrl)
 
+  var stylesUrl = helper.getUniqueFilename('styles')
+  helper.registerLink('styles', stylesUrl)
+
   // set up templating
   view.layout = conf.default.layoutFile ?
     path.getResourcePath(path.dirname(conf.default.layoutFile),
@@ -1143,7 +1149,7 @@ exports.publish = function(taffyData, opts, tutorials) {
         longname: (opts.mainpagetitle) ? opts.mainpagetitle : 'Main Page'
       }]
     ).concat(files), indexUrl)
-  
+
   if (env.conf.templates.betterDocs.includeTodoPage) {
     //Generate the todo page
     let docs = {};
@@ -1164,6 +1170,14 @@ exports.publish = function(taffyData, opts, tutorials) {
 
     generate('TODO', '', [{kind: 'todo', docs:docs}], helper.getUniqueFilename('Todo'));
   }
+
+  // generate('Styles', '',
+  //   [{
+  //     kind: 'stylespage',
+  //     // readme: opts.readme,
+  //     longname: "Styles"
+  //   }]
+  //  , stylesUrl)
 
   // set up the lists that we'll use to generate pages
   classes = taffy(members.classes)
@@ -1239,6 +1253,28 @@ exports.publish = function(taffyData, opts, tutorials) {
   }
 
   saveChildren(tutorials)
+
+  function generateStyles() {
+
+    const stylesFile = fs.readFileSync(opts.styles);
+    
+    var tutorialData = {
+      title: "Global App Styles",
+      subtitle: '',
+      header: "Global App Styles",
+      code: stylesFile
+    }
+
+    var stylesPath = path.join(outdir, stylesUrl)
+    var html = view.render('stylespage.tmpl', tutorialData)
+
+    // yes, you can use {@link} in tutorials too!
+    html = helper.resolveLinks(html) // turn {@link foo} into <a href="foodoc.html">foo</a>
+
+    fs.writeFileSync(stylesPath, html, 'utf8')
+  }
+
+  generateStyles();
 
   function saveLandingPage() {
     const content = fs.readFileSync(conf.betterDocs.landing, 'utf8')
