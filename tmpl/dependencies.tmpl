@@ -1,0 +1,31 @@
+<?js
+var data = obj;
+var self = this;
+?>
+
+<section>
+    <article class="home_page">
+        <?js if (data.dependencies) { ?>
+        
+            <table>
+                <tr>
+                    <th>
+                       Package 
+                    </th>
+                    <th>
+                       Version 
+                    </th>
+                </tr>
+                <?js Object.keys(data.dependencies).forEach(function(key) { ?>
+                    <tr>
+                        <td><?js= key ?></td>
+                        <td><?js= data.dependencies[key] ?></td>
+                    </tr>
+                <?js }); ?>
+            </table>
+            
+        <?js } ?>
+        
+    </article>
+</section>
+

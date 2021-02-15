@@ -640,6 +640,7 @@ function buildNav(members, navTypes = null, betterDocs) {
   }
 
   nav += `<h3><a href="styles.html">Global App Styles</a></h3>`;
+  nav += `<h3><a href="dependencies.html">Dependencies</a></h3>`;
 
   var categorised = {}
   var rootScope = {}
@@ -937,6 +938,9 @@ exports.publish = function(taffyData, opts, tutorials) {
   var stylesUrl = helper.getUniqueFilename('styles')
   helper.registerLink('styles', stylesUrl)
 
+  var dependenciesUrl = helper.getUniqueFilename('dependencies')
+  helper.registerLink('dependencies', dependenciesUrl)
+
   // set up templating
   view.layout = conf.default.layoutFile ?
     path.getResourcePath(path.dirname(conf.default.layoutFile),
@@ -1140,7 +1144,6 @@ exports.publish = function(taffyData, opts, tutorials) {
   // index page displays information from package.json and lists files
   files = find({kind: 'file'})
   packages = find({kind: 'package'})
-
   generate('App Codex', '',
     packages.concat(
       [{
@@ -1275,6 +1278,28 @@ exports.publish = function(taffyData, opts, tutorials) {
   }
 
   generateStyles();
+
+  function generateDependencies() {
+
+    const packageFile = JSON.parse(fs.readFileSync(opts.package));
+    
+    var tutorialData = {
+      title: "Dependencies",
+      subtitle: '',
+      header: "Dependencies",
+      dependencies: packageFile.dependencies
+    }
+
+    var dependenciesPath = path.join(outdir, dependenciesUrl)
+    var html = view.render('dependencies.tmpl', tutorialData)
+
+    // yes, you can use {@link} in tutorials too!
+    html = helper.resolveLinks(html) // turn {@link foo} into <a href="foodoc.html">foo</a>
+
+    fs.writeFileSync(dependenciesPath, html, 'utf8')
+  }
+
+  generateDependencies();
 
   function saveLandingPage() {
     const content = fs.readFileSync(conf.betterDocs.landing, 'utf8')
