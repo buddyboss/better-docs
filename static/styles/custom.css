@@ -127,7 +127,7 @@ html {
 }
 
 .sidebar .search-wrapper {
-    margin-top: -5px;
+    margin: -5px 10px 21px;
 }
 
 body,
@@ -175,6 +175,16 @@ body.bb-resources {
 .top-nav .menu .navigation .link:hover:not(.no-hover) {
     border-bottom: 0;
     color: #df613c;
+}
+
+.top-nav .menu .navigation {
+    margin-bottom: 0;
+}
+
+.navigation__ver {
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-right: 10px;
 }
 
 #main {
@@ -408,7 +418,7 @@ table.props td.name code {
 }
 
 ul.bbdocs-docs-list {
-    margin: 0;
+    margin: 40px 0 0;
     padding: 0;
     list-style: none;
     width: 100%;
@@ -425,6 +435,8 @@ li.bbdocs-docs-single {
     background: #fff;
     -webkit-transition: all linear .2s;
     transition: all linear .2s;
+    display: flex;
+    align-items: flex-start;
 }
 
 li.bbdocs-docs-single a {
@@ -432,8 +444,8 @@ li.bbdocs-docs-single a {
 }
 
 li.bbdocs-docs-single img {
-    width: 40px;
-    height: 40px;
+    width: 100px;
+    max-height: 70px;
     margin-right: 10px;
     vertical-align: middle;
 }
@@ -441,13 +453,8 @@ li.bbdocs-docs-single img {
 li.bbdocs-docs-single h3 {
     font-size: 20px;
     font-weight: 500;
-    padding: 35px 30px 0;
+    padding: 0 0 20px;
     margin: 0;
-    /* line-height: 1.4; */
-    /* display: flex;
-    align-content: center;
-    min-height: 68px;
-    position: relative; */
     color: #df613c;
 }
 
@@ -456,7 +463,8 @@ li.bbdocs-docs-single h3 {
 }
 
 li.bbdocs-docs-single .inside {
-    padding: 30px;
+    padding: 0;
+    padding-left: 30px;
     min-height: 130px;
     color: #4d5c6d;
     background-repeat: no-repeat;

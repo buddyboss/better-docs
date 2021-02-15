@@ -633,7 +633,7 @@ function buildGroupNav (members, title) {
  */
 function buildNav(members, navTypes = null, betterDocs) {
   const href = betterDocs.landing ? 'docs.html' : 'index.html'
-  var nav = '';
+  var nav = `<h3><a href="${href}">Overview</a></h3>`;
   if (env.conf.templates.betterDocs.includeTodoPage) {
     let todoHref = 'Todo.html';
     nav += `<h2><a href="${todoHref}">TODO</a></h2>`;
@@ -1144,7 +1144,7 @@ exports.publish = function(taffyData, opts, tutorials) {
   // index page displays information from package.json and lists files
   files = find({kind: 'file'})
   packages = find({kind: 'package'})
-  generate('App Codex', '',
+  generate('Overview', '',
     packages.concat(
       [{
         kind: 'mainpage',
@@ -1305,7 +1305,7 @@ exports.publish = function(taffyData, opts, tutorials) {
     const content = fs.readFileSync(conf.betterDocs.landing, 'utf8')
         
     var landingPageData = {
-      title: 'App Codex',
+      title: 'Overview',
       content,
     }
 
