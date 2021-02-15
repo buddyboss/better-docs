@@ -105,10 +105,6 @@ font-weight: normal;
 src:url(../fonts/SFUIDisplay-Bold.woff) format("woff"),url(../fonts/SFUIDisplay-Bold.ttf) format("truetype");
 }
 
-html {
-    height: auto;
-}
-
 #sidebarNav,
 #main > #sidebarNav {
     position: fixed;
@@ -205,7 +201,7 @@ body.bb-resources {
 }
 
 #main-content-wrapper .content h1 {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     line-height: 40px;
     padding-bottom: 14px;
@@ -214,7 +210,7 @@ body.bb-resources {
 }
 
 #main-content-wrapper .content h2 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 24px;
     line-height: 26px;
 }
@@ -267,7 +263,7 @@ body.bb-resources {
 #side-nav h3 {
     text-transform: none;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 20px;
     color: #4D5C6D;
     margin: 0;
     padding: 10px 15px;
