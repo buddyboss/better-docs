@@ -525,7 +525,7 @@ a.view_button:hover {
     width: 90%;
     background-repeat: no-repeat;
     background-size: 16px;
-    background-image: url(../img/search.svg);
+    background-image: url(../images/search.svg);
     background-position: left 10px center;
 }
 

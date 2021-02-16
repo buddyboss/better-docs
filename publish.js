@@ -583,6 +583,26 @@ function buildGroupNav (members, title) {
   if (title) {
     nav += '<h2>' + title + '</h2>'
   }
+
+  if (members.globals && members.globals.length) {
+    globalNav = ''
+
+    members.globals.forEach(function(g) {
+      if ( g.kind !== 'typedef' && !hasOwnProp.call(seen, g.longname) ) {
+        globalNav += '<li>' + linkto(g.longname, g.name) + '</li>'
+      }
+      seen[g.longname] = true
+    })
+
+    if (!globalNav) {
+      // turn the heading into a link so you can actually get to the global page
+      nav += '<h3>' + linkto('global', globalStr) + '</h3>'
+    }
+    else {
+      nav += '<h3>' + globalStr + '</h3><ul>' + globalNav + '</ul>'
+    }
+  }
+
   nav += buildMemberNav(members.tutorials || [], 'Tutorials', seenTutorials, linktoTutorial)
   nav += buildMemberNav(members.modules || [], 'Modules', {}, linkto)
   nav += buildMemberNav(members.externals || [], 'Externals', seen, linktoExternal)
@@ -592,26 +612,7 @@ function buildGroupNav (members, title) {
   nav += buildMemberNav(members.events || [], 'Events', seen, linkto)
   nav += buildMemberNav(members.mixins || [], 'Mixins', seen, linkto)
   nav += buildMemberNav(members.components || [], 'Components', seen, linkto)
-  nav += buildMemberNav(members.globals || [], 'Type Definitions', seen, linkto)
     
-  // if (members.globals && members.globals.length) {
-  //   globalNav = ''
-
-  //   members.globals.forEach(function(g) {
-  //     if ( g.kind !== 'typedef' && !hasOwnProp.call(seen, g.longname) ) {
-  //       globalNav += '<li>' + linkto(g.longname, g.name) + '</li>'
-  //     }
-  //     seen[g.longname] = true
-  //   })
-
-  //   if (!globalNav) {
-  //     // turn the heading into a link so you can actually get to the global page
-  //     nav += '<h3>' + linkto('global', globalStr) + '</h3>'
-  //   }
-  //   else {
-  //     nav += '<h3>' + globalStr + '</h3><ul>' + globalNav + '</ul>'
-  //   }
-  // }
   nav += '</div>'
   return nav
 }
