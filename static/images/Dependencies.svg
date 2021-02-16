@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Dependencies</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dependencies">
+            <g id="Group-100-Copy">
+                <rect id="Rectangle" x="0" y="0" width="150" height="150"></rect>
+            </g>
+            <g id="Group-98-Copy" transform="translate(7.000000, 4.000000)">
+                <path d="M86.4219249,69.5696025 L86.4219249,124.405755 C86.4219249,134.223936 78.7061577,142.178005 69.1887393,142.178005 L17.4891825,142.178005 C7.97176406,142.178005 0.25599687,134.223936 0.25599687,124.405755 L0.25599687,17.7722507 C0.25599687,7.95406953 7.97176406,0 17.4891825,0 L47.7531516,0 L47.7531516,10.7066782 L38.4725652,10.7066782 C35.3932419,10.7066782 32.8969571,13.202963 32.8969571,16.2822863 L32.8969571,53.7187938 C32.8969571,56.7981171 35.3932419,59.2944018 38.4725652,59.2944018 L44.7819127,59.2944018 L44.7819127,59.2944018 L44.7819127,63.9939945 C44.7819127,67.0733178 47.2781974,69.5696025 50.3575207,69.5696025 L86.4219249,69.5696025 L86.4219249,69.5696025 Z" id="Path-Copy-14" fill="#F0F0F0"></path>
+                <circle id="Oval-Copy-7" fill="#F2533C" cx="43.2109624" cy="124.057279" r="6.96951007"></circle>
+                <path d="M86.4219249,64.1165227 L86.4219249,125.451181 C86.4219249,134.689151 78.9330706,142.178005 69.6951007,142.178005 L16.7268242,142.178005 C7.48885427,142.178005 0,134.689151 0,125.451181 L0,16.7268242 C0,7.48885427 7.48885427,0 16.7268242,0 L69.6951007,0 C75.8723348,0 81.2674846,3.34850082 84.1644419,8.32939429" id="Path" stroke="#717375" stroke-width="5.57560806" stroke-linecap="round"></path>
+                <g id="Group-95" transform="translate(90.611584, 34.863412) scale(-1, 1) translate(-90.611584, -34.863412) translate(44.611584, 8.363412)">
+                    <path d="M25.0810493,36.2414524 L75.2615218,36.2414524 L75.2615218,36.2414524 L75.2615218,52.9682765 L19.5054413,52.9682765 L19.5054413,41.8170604 C19.5054413,38.7377371 22.001726,36.2414524 25.0810493,36.2414524 Z" id="Rectangle-Copy-28" fill="#FFAB93" transform="translate(47.383482, 44.604864) scale(-1, 1) translate(-47.383482, -44.604864) "></path>
+                    <path d="M25.0810493,5.57560806 L75.2615218,5.57560806 L75.2615218,5.57560806 L75.2615218,22.3024322 L19.5054413,22.3024322 L19.5054413,11.1512161 C19.5054413,8.07189281 22.001726,5.57560806 25.0810493,5.57560806 Z" id="Rectangle-Copy-29" fill="#FFAB93" transform="translate(47.383482, 13.939020) scale(-1, 1) translate(-47.383482, -13.939020) "></path>
+                    <line x1="2.77861711" y1="41.8170604" x2="16.9810968" y2="41.8170604" id="Path" stroke="#E64C35" stroke-width="5.57560806" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <polyline id="Path" stroke="#E64C35" stroke-width="5.57560806" stroke-linecap="round" stroke-linejoin="round" points="80.8189855 41.8170604 91.988346 41.8170604 91.988346 11.1512161 82.8728788 11.1512161"></polyline>
+                    <line x1="19.5077095" y1="11.1512161" x2="8.35422517" y2="11.1512161" id="Path" stroke="#E64C35" stroke-width="5.57560806" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <rect id="Rectangle-Copy-25" stroke="#E64C35" stroke-width="5.57560806" stroke-linecap="round" stroke-linejoin="round" x="19.5054413" y="30.6658443" width="61.3316886" height="22.3024322"></rect>
+                    <rect id="Rectangle" stroke="#E64C35" stroke-width="5.57560806" stroke-linecap="round" stroke-linejoin="round" x="19.5054413" y="0" width="61.3316886" height="22.3024322"></rect>
+                    <polyline id="Path" stroke="#E64C35" stroke-width="5.57560806" stroke-linecap="round" stroke-linejoin="round" points="11.1512161 32.0981474 0 41.8554615 11.1512161 51.6127756"></polyline>
+                </g>
+                <g id="Group-96" transform="translate(25.090236, 80.846317)" stroke="#717375" stroke-linecap="round" stroke-linejoin="round" stroke-width="5.57560806">
+                    <polyline id="Path" points="27.8780403 0 39.0292564 9.7573141 27.8780403 19.5146282"></polyline>
+                    <polyline id="Path" points="11.1512161 0 0 9.7573141 11.1512161 19.5146282"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
