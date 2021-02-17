@@ -608,7 +608,7 @@ function buildGroupNav (members, title) {
 
     if (!globalNav) {
       // turn the heading into a link so you can actually get to the global page
-      nav += '<h3>' + linkto('global', globalStr) + '</h3>'
+      //nav += '<h3>' + linkto('global', globalStr) + '</h3>'
     }
     else {
       nav += '<h3>' + globalStr + '</h3><ul>' + globalNav + '</ul>'
@@ -623,8 +623,6 @@ function buildGroupNav (members, title) {
   nav += buildMemberNav(members.interfaces || [], 'Interfaces', seen, linkto)
   nav += buildMemberNav(members.events || [], 'Events', seen, linkto)
   nav += buildMemberNav(members.mixins || [], 'Mixins', seen, linkto)
-  // nav += buildMemberNav(members.components || [], 'Components', seen, linkto)
-  // nav += buildMemberNav(members.globals || [], 'Type Definitions', seen, linkto)
     
   nav += '</div>'
   return nav
@@ -653,9 +651,9 @@ function buildNav(members, navTypes = null, betterDocs) {
     nav += `<h2><a href="${todoHref}">TODO</a></h2>`;
   }
 
+  nav += `<h3><a href="global.html">Type Definitions</a></h3>`;
   nav += `<h3><a href="styles.html">Global App Styles</a></h3>`;
   nav += `<h3><a href="dependencies.html">Dependencies</a></h3>`;
-  nav += `<h3><a href="global.html">Type Definitions</a></h3>`;
 
   var categorised = {}
   var rootScope = {}
