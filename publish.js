@@ -555,7 +555,19 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
         if (subCategoryName) {
           heading = heading + ' / ' + subCategoryName
         }
-        nav += '<h3>' + heading + '</h3><ul>' + itemsNav + '</ul>'
+        var search = env.conf.templates && env.conf.templates.search;
+
+        nav += '<h3>' + heading + '</h3>'
+
+        if(search && heading === "Hooks API") {
+          nav += `
+          <div class="search-wrapper">
+              <input id="search" type="text" placeholder="Search docs..." class="input">
+          </div>`;
+        }
+          
+        nav += '<ul>' + itemsNav + '</ul>'
+
       }
     }
   })
@@ -591,8 +603,8 @@ function buildGroupNav (members, title) {
   nav += buildMemberNav(members.interfaces || [], 'Interfaces', seen, linkto)
   nav += buildMemberNav(members.events || [], 'Events', seen, linkto)
   nav += buildMemberNav(members.mixins || [], 'Mixins', seen, linkto)
-  nav += buildMemberNav(members.components || [], 'Components', seen, linkto)
-  nav += buildMemberNav(members.globals || [], 'Type Definitions', seen, linkto)
+  // nav += buildMemberNav(members.components || [], 'Components', seen, linkto)
+  // nav += buildMemberNav(members.globals || [], 'Type Definitions', seen, linkto)
     
   // if (members.globals && members.globals.length) {
   //   globalNav = ''
@@ -641,6 +653,7 @@ function buildNav(members, navTypes = null, betterDocs) {
 
   nav += `<h3><a href="styles.html">Global App Styles</a></h3>`;
   nav += `<h3><a href="dependencies.html">Dependencies</a></h3>`;
+  nav += `<h3><a href="global.html">Type Definitions</a></h3>`;
 
   var categorised = {}
   var rootScope = {}
