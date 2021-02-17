@@ -459,6 +459,10 @@ li.bbdocs-docs-single img {
     vertical-align: middle;
 }
 
+li.bbdocs-docs-single.global img {
+    width: 86%;
+}
+
 li.bbdocs-docs-single h3 {
     font-size: 20px;
     font-weight: 500;
