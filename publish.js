@@ -595,6 +595,26 @@ function buildGroupNav (members, title) {
   if (title) {
     nav += '<h2>' + title + '</h2>'
   }
+
+  if (members.globals && members.globals.length) {
+    globalNav = ''
+
+    members.globals.forEach(function(g) {
+      if ( g.kind !== 'typedef' && !hasOwnProp.call(seen, g.longname) ) {
+        globalNav += '<li>' + linkto(g.longname, g.name) + '</li>'
+      }
+      seen[g.longname] = true
+    })
+
+    if (!globalNav) {
+      // turn the heading into a link so you can actually get to the global page
+      nav += '<h3>' + linkto('global', globalStr) + '</h3>'
+    }
+    else {
+      nav += '<h3>' + globalStr + '</h3><ul>' + globalNav + '</ul>'
+    }
+  }
+
   nav += buildMemberNav(members.tutorials || [], 'Tutorials', seenTutorials, linktoTutorial)
   nav += buildMemberNav(members.modules || [], 'Modules', {}, linkto)
   nav += buildMemberNav(members.externals || [], 'Externals', seen, linktoExternal)
@@ -606,24 +626,6 @@ function buildGroupNav (members, title) {
   // nav += buildMemberNav(members.components || [], 'Components', seen, linkto)
   // nav += buildMemberNav(members.globals || [], 'Type Definitions', seen, linkto)
     
-  // if (members.globals && members.globals.length) {
-  //   globalNav = ''
-
-  //   members.globals.forEach(function(g) {
-  //     if ( g.kind !== 'typedef' && !hasOwnProp.call(seen, g.longname) ) {
-  //       globalNav += '<li>' + linkto(g.longname, g.name) + '</li>'
-  //     }
-  //     seen[g.longname] = true
-  //   })
-
-  //   if (!globalNav) {
-  //     // turn the heading into a link so you can actually get to the global page
-  //     nav += '<h3>' + linkto('global', globalStr) + '</h3>'
-  //   }
-  //   else {
-  //     nav += '<h3>' + globalStr + '</h3><ul>' + globalNav + '</ul>'
-  //   }
-  // }
   nav += '</div>'
   return nav
 }
@@ -645,7 +647,7 @@ function buildGroupNav (members, title) {
  */
 function buildNav(members, navTypes = null, betterDocs) {
   const href = betterDocs.landing ? 'docs.html' : 'index.html'
-  var nav = '';
+  var nav = `<h3><a href="${href}">Overview</a></h3>`;
   if (env.conf.templates.betterDocs.includeTodoPage) {
     let todoHref = 'Todo.html';
     nav += `<h2><a href="${todoHref}">TODO</a></h2>`;
@@ -1157,7 +1159,7 @@ exports.publish = function(taffyData, opts, tutorials) {
   // index page displays information from package.json and lists files
   files = find({kind: 'file'})
   packages = find({kind: 'package'})
-  generate('App Codex', '',
+  generate('Overview', '',
     packages.concat(
       [{
         kind: 'mainpage',
@@ -1318,7 +1320,7 @@ exports.publish = function(taffyData, opts, tutorials) {
     const content = fs.readFileSync(conf.betterDocs.landing, 'utf8')
         
     var landingPageData = {
-      title: 'App Codex',
+      title: 'Overview',
       content,
     }
 
