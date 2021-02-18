@@ -562,7 +562,7 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
         if(search && heading === "Hooks API") {
           nav += `
           <div class="search-wrapper">
-              <input id="search" type="text" placeholder="Search docs..." class="input">
+              <input id="search" type="text" placeholder="Search Hooks..." class="input">
           </div>`;
         }
           
@@ -652,7 +652,7 @@ function buildNav(members, navTypes = null, betterDocs) {
   }
 
   nav += `<h3><a href="global.html">Type Definitions</a></h3>`;
-  nav += `<h3><a href="styles.html">Global App Styles</a></h3>`;
+  nav += `<h3><a href="styles.html">Global CSS Styles</a></h3>`;
   nav += `<h3><a href="dependencies.html">Dependencies</a></h3>`;
 
   var categorised = {}
@@ -1275,9 +1275,9 @@ exports.publish = function(taffyData, opts, tutorials) {
     const stylesFile = fs.readFileSync(opts.styles);
     
     var tutorialData = {
-      title: "Global App Styles",
+      title: "Global CSS Styles",
       subtitle: '',
-      header: "Global App Styles",
+      header: "Global CSS Styles",
       code: stylesFile
     }
 
