@@ -15,7 +15,7 @@
 
         if (!list.length) {
           target.parentNode.style.display = 'none'
-          target.parentNode.previousSibling.style.display = 'none'
+          //target.parentNode.previousSibling.style.display = 'none'
         }
 
         /**
@@ -23,7 +23,8 @@
          * Remove the entire category if no item is displayed
          */
         const category = [...target.parentNode.parentNode.childNodes]
-          .filter( elem => elem.tagName !== 'H2' && elem.style.display !== 'none')
+          //.filter( elem => elem.tagName !== 'H2' && elem.style.display !== 'none')
+          .filter( elem => elem.tagName !== 'H2')
 
         if (!category.length) {
           target.parentNode.parentNode.style.display = 'none'
