@@ -118,12 +118,12 @@ body {
 #main > #sidebarNav {
     position: fixed;
     height: calc(100vh - 75px);
-    width: 330px;
+    width: 280px;
     overflow-x: hidden;
 }
 
 #main-content-wrapper {
-    margin-left: 330px;
+    margin-left: 280px;
 }
 
 #main > #main-content-wrapper {
@@ -132,7 +132,7 @@ body {
 }
 
 .sidebar .search-wrapper {
-    margin: -5px 10px 21px;
+    margin: 10px 10px 21px;
 }
 
 body,
@@ -202,6 +202,7 @@ body.bb-resources {
 #main #main-content-wrapper {
     background-color: #fff;
     border-right: 1px solid #E7E9EC;
+    padding-top: 40px;
 }
 
 #main > .core > .content {
@@ -272,11 +273,22 @@ body.bb-resources {
 #side-nav h3 {
     text-transform: none;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
     color: #4D5C6D;
     margin: 0;
     padding: 10px 15px;
     font-family: 'SF UI Display Medium', sans-serif;
+}
+
+#sidebarNav .category {
+    margin: 10px 0 0;
+    border-top: 1px solid #EAEAF1;
+    padding: 10px 0 0;
+}
+
+#sidebarNav .category h3 {
+    font-size: 16px;
+    color: #808080;
 }
 
 #sidebarNav h3 a,
@@ -433,7 +445,7 @@ li.bbdocs-docs-single {
     font-size: 15px;
     line-height: 1.4;
     margin: 0;
-    padding: 30px;
+    padding: 20px 0px 20px;
     margin-bottom: 20px;
     position: relative;
     border: 0;
@@ -457,6 +469,10 @@ li.bbdocs-docs-single img {
     width: 100%;
     margin-right: 10px;
     vertical-align: middle;
+}
+
+li.bbdocs-docs-single.global img {
+    width: 86%;
 }
 
 li.bbdocs-docs-single h3 {
@@ -527,6 +543,16 @@ a.view_button:hover {
     background-size: 16px;
     background-image: url(../images/search.svg);
     background-position: left 10px center;
+}
+
+.global-styles pre {
+    max-height: 800px;
+    max-height: calc(100vh - 300px);
+}
+
+.global-styles-desc,
+.content p.global-styles-desc:not(:last-child) {
+    margin-bottom: 35px;
 }
 
 @media screen and (max-width: 1023px) {
