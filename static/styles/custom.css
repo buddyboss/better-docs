@@ -120,6 +120,8 @@ body {
     height: calc(100vh - 75px);
     width: 280px;
     overflow-x: hidden;
+    padding-top: 30px;
+    padding-left: 0;
 }
 
 #main-content-wrapper {
