@@ -623,7 +623,7 @@ function buildGroupNav (members, title) {
   nav += buildMemberNav(members.interfaces || [], 'Interfaces', seen, linkto)
   nav += buildMemberNav(members.events || [], 'Events', seen, linkto)
   nav += buildMemberNav(members.mixins || [], 'Mixins', seen, linkto)
-    
+  nav += buildMemberNav(members.components || [], 'Components', seen, linkto)  
   nav += '</div>'
   return nav
 }
